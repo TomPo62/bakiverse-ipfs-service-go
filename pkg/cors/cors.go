@@ -9,7 +9,7 @@ func CORSMiddleware(next http.Handler) http.Handler {
 		// Définir les en-têtes CORS
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
-		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Sender-Key, X-Api-Key")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Disposition, Content-Length, Authorization, X-Api-Key, X-API-KEY")
 
 		// Vérification des requêtes OPTIONS (pré-vol)
 		if r.Method == http.MethodOptions {
